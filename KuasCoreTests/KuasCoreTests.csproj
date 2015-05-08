@@ -97,10 +97,9 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Core\ObjectFactoryUnitTest.cs" />
-    <Compile Include="Dao\EmpolyeeDaoUnitTest.cs" />
+    <Compile Include="Dao\CourseDaoUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Impl\CompanyServiceUnitTest.cs" />
-    <Compile Include="Services\Impl\EmployeeServiceUnitTest.cs" />
+    <Compile Include="Services\Impl\CourseServiceUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KuasCore\KuasCore.csproj">

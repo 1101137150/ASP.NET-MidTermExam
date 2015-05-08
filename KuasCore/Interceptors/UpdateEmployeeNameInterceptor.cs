@@ -14,11 +14,11 @@ namespace KuasCore.Interceptors
         public object Invoke(IMethodInvocation invocation)
         {
             Console.WriteLine("DebogLogInterceptor 攔截到一個方法呼叫 = [{0}]", invocation);
-            //Debug.Print("DebogLogInterceptor 攔截到一個方法呼叫 = [{0}]", invocation);
+            Debug.Print("DebogLogInterceptor 攔截到一個方法呼叫 = [{0}]", invocation);
 
-            Employee result = (Employee)invocation.Proceed();
+            Course result = (Course)invocation.Proceed();
 
-            result.Name = result.Name+"哈囉";
+            result.Name = result.Name+" ";
             return result;
         }
     }

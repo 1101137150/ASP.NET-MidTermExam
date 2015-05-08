@@ -35,9 +35,9 @@ namespace KuasCoreTests.Core
 
             // 利用 Spring Object Name 來依賴尋找找出我們要的 Spring Object.
             IApplicationContext applicationContext = ObjectFactory.GetApplicationContext();
-            EmployeeService employeeService = (EmployeeService)applicationContext["employeeService"];
+            CourseService employeeService = (CourseService)applicationContext["employeeService"];
 
-            Employee empolyee = employeeService.GetEmployeeById("dennis_yen");
+            Course empolyee = employeeService.GetCourseById("dennis_yen");
             Assert.IsNotNull(empolyee);
 
             Console.WriteLine("員工編號為 = " + empolyee.Id);
@@ -51,9 +51,9 @@ namespace KuasCoreTests.Core
         {
 
             // 利用 Spring Object Name 來依賴尋找找出我們要的 Spring Object.
-            EmployeeService employeeService = (EmployeeService)ObjectFactory.GetObject("employeeService");
+            CourseService employeeService = (CourseService)ObjectFactory.GetObject("employeeService");
 
-            Employee empolyee = employeeService.GetEmployeeById("dennis_yen");
+            Course empolyee = employeeService.GetCourseById("dennis_yen");
             Assert.IsNotNull(empolyee);
 
             Console.WriteLine("員工編號為 = " + empolyee.Id);

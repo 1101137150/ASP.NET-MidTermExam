@@ -11,7 +11,7 @@ namespace KuasCoreTests.Dao
 {
 
     [TestClass]
-    public class EmpolyeeDaoUnitTest : AbstractDependencyInjectionSpringContextTests
+    public class CourseDaoUnitTest : AbstractDependencyInjectionSpringContextTests
     {
         #region 單元測試 Spring 必寫的內容 
         
@@ -29,16 +29,16 @@ namespace KuasCoreTests.Dao
 
         #endregion
 
-        public IEmployeeDao EmployeeDao { get; set; }
+        public ICourseDao CourseDao { get; set; }
 
         [TestMethod]
-        public void TestEmployeeDao_GetEmployeeById()
+        public void TestCourseDao_GetCourseById()
         {
-            Employee empolyee = EmployeeDao.GetEmployeeById("dennis_yen");
-            Assert.IsNotNull(empolyee);
-            Console.WriteLine("員工編號為 = " + empolyee.Id);
-            Console.WriteLine("員工姓名為 = " + empolyee.Name);
-            Console.WriteLine("員工年齡為 = " + empolyee.Age);
+            Course course = CourseDao.GetCourseById("微積分");
+            Assert.IsNotNull(course);
+            Console.WriteLine("課程編號為 = " + course.Id);
+            Console.WriteLine("課程名稱為 = " + course.Name);
+            Console.WriteLine("課程描述為 = " + course.Dec);
         }
 
     }

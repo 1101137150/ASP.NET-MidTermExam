@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace KuasCore.Services
 {
-    public interface IEmployeeService
+    public interface ICourseService
     {
 
         /// <summary>
@@ -13,7 +13,7 @@ namespace KuasCore.Services
         /// <returns>
         ///     所有員工資料
         /// </returns>
-        IList<Employee> GetAllEmployees();
+        IList<Course> GetAllCourses();
 
         /// <summary>
         ///     依據 ID 取得員工資料.
@@ -21,7 +21,7 @@ namespace KuasCore.Services
         /// <returns>
         ///     該員工資料
         /// </returns>
-        Employee GetEmployeeById(string id);
+        Course GetCourseById(string id);
 
     }
 }
